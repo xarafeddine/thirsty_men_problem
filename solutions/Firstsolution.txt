@@ -1,1 +1,37 @@
+Solution Strategy
+The solution involves creating a fair system that gives all guests a chance to drink water eventually. Here's my proposal:
+Rotating Cup Placement System
 
+Initial Round Setup:
+
+Number all guests from 1 to N
+For the first round, guests place cups in numerical order (Guest 1's cup first, Guest 2's cup second, etc.)
+Host fills the first cup (Guest 1) and the last cup (Guest N)
+
+
+For Subsequent Rounds:
+
+Create a rotation system where:
+
+The order shifts by 2 positions each round
+Example: Round 1: [1,2,3,...,N], Round 2: [3,4,...,N,1,2], etc.
+
+
+Implementation:
+
+Each guest keeps track of their drinking turn
+After each round, those who drank share a small portion with those who didn't
+The rotation ensures everyone gets a turn to drink within ⌈N/2⌉ rounds
+
+
+Enforcement Mechanism:
+
+Any guest who deviates from the rotation is excluded from all future rounds
+Since water is a vital resource, this creates a strong incentive to cooperate
+
+
+Anti-Cheating Measures:
+
+The host (you) marks the positions clearly to prevent confusion
+All cup placements happen simultaneously to prevent last-second changes
+Each round has a designated timekeeper among the guests
